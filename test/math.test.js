@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { add, divide, multiply } from "../src/math.js";
+import { add, divide, isEven, multiply } from "../src/math.js";
 
 describe("add", () => {
   it("adds two numbers", () => {
@@ -20,5 +20,18 @@ describe("divide", () => {
 
   it("throws when dividing by zero", () => {
     expect(() => divide(1, 0)).toThrow("Division by zero");
+  });
+});
+
+describe("isEven", () => {
+  it("returns true for even numbers", () => {
+    expect(isEven(4)).toBe(true);
+    expect(isEven(0)).toBe(true);
+    expect(isEven(-2)).toBe(true);
+  });
+
+  it("returns false for odd numbers", () => {
+    expect(isEven(3)).toBe(false);
+    expect(isEven(-1)).toBe(false);
   });
 });
