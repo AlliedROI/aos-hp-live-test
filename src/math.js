@@ -24,3 +24,7 @@ export function isOdd(n) {
 export function half(n) {
   return n / 2;
 }
+
+export function double(n) {
+  return n * 2;
+}
