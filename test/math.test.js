@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { add, divide, double, half, isEven, isOdd, multiply } from "../src/math.js";
+import { add, divide, double, half, isEven, isOdd, multiply, triple } from "../src/math.js";
 
 describe("add", () => {
   it("adds two numbers", () => {
@@ -62,5 +62,13 @@ describe("double", () => {
     expect(double(4)).toBe(8);
     expect(double(1.5)).toBe(3);
     expect(double(-3)).toBe(-6);
+  });
+});
+
+describe("triple", () => {
+  it("triples a number", () => {
+    expect(triple(3)).toBe(9);
+    expect(triple(1.5)).toBe(4.5);
+    expect(triple(-2)).toBe(-6);
   });
 });
